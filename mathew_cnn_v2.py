@@ -13,11 +13,6 @@ train = datasets.MNIST("",train=True,download=True,
 test = datasets.MNIST("",train=False,download=True,
                        transform = transforms.Compose([transforms.ToTensor()]))
 
-#kappa = np.asarray(train[55][0].tolist())
-#kappa = np.resize(kappa,(28,28))
-
-
-
 bs = 64
 trainset = torch.utils.data.DataLoader(train, batch_size = bs,
                                        shuffle = True)
